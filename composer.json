@@ -1,5 +1,6 @@
 {
     "name": "ministrare/cmscore",
+    "type": "package",
     "description": "Library",
     "authors": [{
         "name": "Lesley Forn",
@@ -9,7 +10,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Ministrare\\Cmscore\\": "src"
+            "ministrare\\cmscore\\": "src/"
         }
     },
     "extra": {
