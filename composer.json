@@ -1,0 +1,22 @@
+{
+    "name": "ministrare/cmscore",
+    "description": "Library",
+    "authors": [{
+        "name": "Lesley Forn",
+        "email": "ministrare@hotmail.com"
+    }],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ministrare\\Cmscore\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ministrare\\cmscore\\src\\Providers\\CoreServiceProvider"
+            ]
+        }
+    }
+}
