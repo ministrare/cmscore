@@ -10,14 +10,14 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "ministrare\\cmscore\\": "src/"
+            "ministrare\\cmscore\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ministrare\\cmscore\\src\\Providers\\CoreServiceProvider"
-            ]
+                "Ministrare\\Cmscore\\Providers\\CoreServiceProvider"
+            ],
         }
     }
 }
