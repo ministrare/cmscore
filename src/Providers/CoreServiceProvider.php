@@ -13,7 +13,7 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        info('Ministrare/Cmscore is loaded!');
     }
 
     /**
