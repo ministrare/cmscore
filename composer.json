@@ -15,7 +15,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ministrare\\cmscore\\src\\Providers\\CoreServiceProvider"
+                "ministrare\\cmscore\\src\\Providers\\CoreServiceProvider"
             ]
         }
     }
