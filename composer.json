@@ -9,7 +9,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Ministrare\\Cmscore\\": "src/"
+            "Ministrare\\Cmscore\\": "src"
         }
     },
     "extra": {
