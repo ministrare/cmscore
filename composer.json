@@ -15,6 +15,10 @@
     },
     "extra": {
         "laravel": {
+            "aliases": {
+                "Input": "Ministrare\\Cmscore\\Facades\\Input",
+                "Utilities": "Ministrare\\Cmscore\\Facades\\Utilities"
+            },
             "providers": [
                 "Ministrare\\Cmscore\\Providers\\CoreServiceProvider"
             ]
