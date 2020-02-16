@@ -3,6 +3,7 @@
 namespace Ministrare\Cmscore\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Ministrare\Cmscore\Library\Form;
 use Ministrare\Cmscore\Library\Input;
 use Ministrare\Cmscore\Library\Utilities;
 
@@ -19,8 +20,8 @@ class CoreServiceProvider extends ServiceProvider
         $this->app->bind('utilities', function($app) {
             return new Utilities;
         });
-        $this->app->bind('input', function($app) {
-            return new Input;
+        $this->app->bind('form', function($app) {
+            return new Form;
         });
 
 
