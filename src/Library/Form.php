@@ -66,23 +66,32 @@ class Form
 
     public function render()
     {
-        switch ($this->settings['type']){
+        $settings = $this->settings;
+        unset($this->settings);
+
+        if(isset($settings['type']))
+        switch ($settings['type']){
             case 'text' :
                 $view = 'cmscore::library.form.inputs.text';
-            break;
+                break;
 
             case 'email' :
                 $view = 'cmscore::library.form.inputs.email';
-            break;
-        }
+                break;
 
-        $settings = $this->settings;
-        unset($this->settings);
+            case 'password' :
+                $view = 'cmscore::library.form.inputs.password';
+                break;
+
+            default :
+                return abort(404, 'input:Type not found');
+                break;
+        }
 
         if(isset($view)){
             return view($view)->with($settings);
         }
 
-        return abort(404, 'input:Type not found');
+        return abort(404, 'Forms class: No view found');
     }
 }

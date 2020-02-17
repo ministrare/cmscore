@@ -11,14 +11,15 @@
            @isset($placeholder) placeholder="{{ $placeholder }}" @endif
            @isset($required) required @endif
            @isset($autofocus) autofocus @endif
+           @isset($autocomplete) autocomplete="{{$slug}}" @endif
     >
     @isset($small)
         <small id="{{ $slug }}_help" class="form-text text-muted">{{ $small }}</small>
     @endif
 
-    @if($error)
-        <span class="invalid-feedback" role="alert">
+    @error($slug)
+    <span class="invalid-feedback" role="alert">
         <strong>{{ $message }}</strong>
     </span>
-    @endif
+    @enderror
 </div>
