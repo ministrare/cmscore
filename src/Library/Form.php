@@ -70,23 +70,29 @@ class Form
         unset($this->settings);
 
         if(isset($settings['type']))
-        switch ($settings['type']){
-            case 'text' :
-                $view = 'cmscore::library.form.inputs.text';
-                break;
+            switch ($settings['type']){
 
-            case 'email' :
-                $view = 'cmscore::library.form.inputs.email';
-                break;
+                case 'check' :
 
-            case 'password' :
-                $view = 'cmscore::library.form.inputs.password';
-                break;
+                    $view = 'cmscore::library.form.inputs.check';
+                    break;
 
-            default :
-                return abort(404, 'input:Type not found');
-                break;
-        }
+                case 'email' :
+                    $view = 'cmscore::library.form.inputs.email';
+                    break;
+
+                case 'password' :
+                    $view = 'cmscore::library.form.inputs.password';
+                    break;
+
+                case 'text' :
+                    $view = 'cmscore::library.form.inputs.text';
+                    break;
+
+                default :
+                    return abort(404, 'input:Type not found');
+                    break;
+            }
 
         if(isset($view)){
             return view($view)->with($settings);
