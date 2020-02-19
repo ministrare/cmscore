@@ -24,10 +24,6 @@ class CoreServiceProvider extends ServiceProvider
             return new Form;
         });
 
-        $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views'),
-        ], 'views');
-
         info('Ministrare/Cmscore is loaded!');
     }
 
